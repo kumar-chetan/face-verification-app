@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Face Comparison{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="static\css\f_comp.css">
+    <div class="container">
+        <h2>Face Comparison</h2>
+        
+        <form method="POST" action="/face_comparison" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            
+            <label for="image">Image:</label>
+            <input type="file" name="image" accept="image/*" required>
+            
+            <button type="submit">Compare Face</button>
+        </form>
+        
+        {% if result %}
+            <h3>Comparison Result: {{ result }}</h3>
+        {% endif %}
+    </div>
+{% endblock %}

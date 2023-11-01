@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="static\css\style.css">
+    <div class="hero"style="margin-top: 5px;">
+        <h1>Welcome to Face Verification App</h1>
+        <p>Securely compare faces, upload and manage your photos, and explore powerful face recognition technology.</p>
+        <a href="/face_comparison" class="cta-button">Get Started</a>
+    </div>
+
+    
+    <div class="features-container">
+        <a href="/face_comparison" class="feature-link">
+            <div class="feature">
+                <h2>Face Comparison</h2>
+                <p>Compare faces to determine if they match using advanced face recognition technology.</p>
+            </div>
+        </a>
+
+        <a href="/face_upload" class="feature-link">
+            <div class="feature">
+                <h2>Face Upload</h2>
+                <p>Upload your photos and manage them securely with our face recognition capabilities.</p>
+            </div>
+        </a>
+
+        <a href="/database" class="feature-link">
+            <div class="feature">
+                <h2>Database Management</h2>
+                <p>View and manage your uploaded photos in a user-friendly database.</p>
+            </div>
+        </a>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Face Upload{% endblock %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="static\css\f_upload.css">
+
+    <div class="container">
+        <h2>Face Upload</h2>
+        
+        <form method="POST" action="/face_upload" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            
+            <label for="photo">Photo:</label>
+            <input type="file" name="photo" accept="image/*" required>
+            
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+{% endblock %}

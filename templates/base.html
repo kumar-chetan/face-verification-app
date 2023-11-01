@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My App{% endblock %}</title>
+    <link rel="stylesheet" href="static\css\base_style.css">
+    
+</head>
+<body>
+
+<nav>
+    <ul class="navbar">
+        <li class="navitem"><a href="/">Home</a></li>
+        <li class="navitem"><a href="/database">Database</a></li>
+        <li class="navitem"><a href="/face_comparison">Face Comparison</a></li>
+        <li class="navitem"><a href="/face_upload">Face Upload in DB</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

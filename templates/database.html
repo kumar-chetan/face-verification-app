@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Database Records{% endblock %}
+
+{% block content %}
+    <h2>Database Records</h2>
+    
+    <form method="POST" action="/database">
+        <input type="text" name="search_name" id="search_name" placeholder="Enter a name" autocomplete="off">
+        <button type="submit">Search</button>
+        <button type="button" id="clear-search">Clear</button>
+    </form>
+
+    {% if matching_people %}
+    <h3>Search Results:</h3>
+    <ul id="matching-people">
+        {% for person in matching_people %}
+        <li>{{ person.name }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No matching results found.</p>
+    {% endif %}
+
+    <h3>All People in Database:</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sno.</th>
+                <th>Full Name</th>
+                <th>Image Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in all_records %}
+            <tr>
+                <td>{{ record.sno }}</td>
+                <td>{{ record.name }}</td>
+                <td>{{ "True" if check_file_exists(record.photo_path) else "False" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <script>
+        // Clear search results
+        document.getElementById('clear-search').addEventListener('click', function () {
+            const searchResults = document.querySelector('#matching-people');
+            if (searchResults) {
+                searchResults.innerHTML = '';
+            }
+        });
+    </script>
+{% endblock %}
