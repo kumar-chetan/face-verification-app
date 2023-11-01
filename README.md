@@ -63,7 +63,7 @@ The Face Verification Web Application is a user-friendly web-based tool that lev
 - Enhanced error handling and user feedback.
 
 ### Contributing :-
-Contributions are welcome! If you'd like to contribute to the project, please follow our contribution guidelines.
+Contributions are welcome! If you'd like to contribute to the project.
 
 
 ### Contact :-
