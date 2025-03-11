@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Face Verification Web Application is a user-friendly web-based tool that leverages advanced face recognition technology to provide a range of functionalities, including face comparison, image upload, and database management. It is built using Flask, a micro web framework in Python, and incorporates various libraries for image processing and database management.
+The Face Verification Web Application is a user-friendly web-based tool that leverages advanced face recognition technology to provide a range of functionalities, including face comparison, image upload, and database management. It is built using Flask, a micro web framework in Python, and incorporates various libraries for image processing and database management .
 
 ![image](https://github.com/kumar-chetan/face-verification-app/assets/112582415/9eb48db3-f140-43f0-be18-d6215f0afc24)
 
